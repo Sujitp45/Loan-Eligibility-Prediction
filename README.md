@@ -10,7 +10,7 @@ import seaborn as sns
 
 import matplotlib.pyplot as plt
 
->### Load the dataset
+### Load the dataset
 
 df = pd.read_csv('loan_data.csv')
 
@@ -32,25 +32,36 @@ plt.show()
 
 ## 2. Data Preprocessing (Cleaning & Transformation) : To prepare the data for machine learning, we handle missing values and perform necessary transformations.
 
-Handling Missing Values: Missing data in critical columns like Loan_Amount and Credit_History is filled using median and mode strategies.   
+Handling Missing Values: Missing data in critical columns like Loan_Amount and Credit_History is filled using median and mode strategies.
+
 Log Transformation: To reduce skewness and bring skewed features like Applicant_Income into a normal distribution, Log Transformation is applied.
+
 Label Encoding: Categorical text data is converted into numerical values using Label Encoding so the model can process it.
 
 Pythonimport numpy as np
+
 from sklearn.preprocessing import LabelEncoder
 
 ### Filling missing values
+
 df['LoanAmount'].fillna(df['LoanAmount'].median(), inplace=True)
+
 df['Credit_History'].fillna(df['Credit_History'].mode()[0], inplace=True)
 
 ### Applying Log Transformation
+
 df['ApplicantIncome_Log'] = np.log(df['ApplicantIncome'])
+
 df['LoanAmount_Log'] = np.log(df['LoanAmount'])
 
 ### Categorical to Numerical conversion
+
 le = LabelEncoder()
+
 categorical_cols = ['Gender', 'Married', 'Education', 'Self_Employed', 'Property_Area', 'Loan_Status']
+
 for col in categorical_cols:
+
     df[col] = le.fit_transform(df[col])
 
     
