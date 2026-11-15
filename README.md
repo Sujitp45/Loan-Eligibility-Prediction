@@ -5,7 +5,9 @@ This repository contains an end-to-end Machine Learning project designed to pred
 ## 1. Descriptive Statistics : The first step involves understanding the underlying patterns and distribution of the data. Key metrics such as Mean, Median, and Outliers are analyzed to ensure data quality.
 
 import pandas as pd
+
 import seaborn as sns
+
 import matplotlib.pyplot as plt
 
 ### Load the dataset
@@ -14,8 +16,10 @@ df = pd.read_csv('loan_data.csv')
 
 ### Display basic information and statistics
 
-print(df.head()) 
-print(df.info())  
+print(df.head())
+
+print(df.info()) 
+
 print(df.describe())
 
 ### Visualize target variable distribution
