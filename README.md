@@ -3,7 +3,8 @@
 ### This repository contains an end-to-end Machine Learning project designed to predict loan approval eligibility based on various applicant criteria.Project OverviewThe objective of this project is to automate the loan eligibility process using a classification model. The project follows a structured data science workflow, including exploratory data analysis, feature engineering, model training, and web deployment.
 
 ## 1. Descriptive Statistics : 
-### The first step involves understanding the underlying patterns and distribution of the data. Key metrics such as Mean, Median, and Outliers are analyzed to ensure data quality.
+
+The first step involves understanding the underlying patterns and distribution of the data. Key metrics such as Mean, Median, and Outliers are analyzed to ensure data quality.
 
 import pandas as pd
 
@@ -31,7 +32,8 @@ plt.title("Loan Approval Distribution")
 
 plt.show()
 
-## 2. Data Preprocessing (Cleaning & Transformation) : 
+## 2. Data Preprocessing (Cleaning & Transformation) :
+
 To prepare the data for machine learning, we handle missing values and perform necessary transformations.
 
 ### Handling Missing Values: Missing data in critical columns like Loan_Amount and Credit_History is filled using median and mode strategies.
@@ -68,7 +70,8 @@ for col in categorical_cols:
 
     
 ## 3. Model Training (Random Forest Classifier) : 
-### Once the data is processed, we train a Random Forest Classifier to learn the patterns between applicant features and loan status.
+
+Once the data is processed, we train a Random Forest Classifier to learn the patterns between applicant features and loan status.
 
 Pythonfrom sklearn.model_selection import train_test_split
 
