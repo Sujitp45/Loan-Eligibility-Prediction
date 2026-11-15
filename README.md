@@ -24,8 +24,10 @@ print(df.describe())
 
 ### Visualize target variable distribution
 
-sns.countplot(x='Loan_Status', data=df)
+sns.countplot(x='Loan_Status', data=df
+
 plt.title("Loan Approval Distribution")
+
 plt.show()
 
 ## 2. Data Preprocessing (Cleaning & Transformation) : To prepare the data for machine learning, we handle missing values and perform necessary transformations.
